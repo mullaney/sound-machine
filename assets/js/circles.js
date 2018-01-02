@@ -10,10 +10,7 @@ function onKeyDown(event) {
     var circle = new Path.Circle(point, RADIUS);
     circle.fillColor = colors[key];
     circles.push(circle);
-    var sound = new Howl({
-      src: ['assets/sounds/' + soundFiles[key]]
-    });
-    sound.play();
+    sounds[key].play();
   }
 }
 
@@ -36,10 +33,7 @@ function onFrame(event) {
 }
 
 var colors = [];
-
-for (var i = 0; i < 26; i++) {
-  colors.push(randomFillColor());
-}
+var sounds = [];
 
 var soundFiles = [
   'dotted-spiral.mp3',
@@ -68,4 +62,9 @@ var soundFiles = [
   'piston-3.mp3',
   'squiggle.mp3',
   'veil.mp3'
-]
+];
+
+for (var i = 0; i < 26; i++) {
+  colors.push(randomFillColor());
+  sounds.push(new Howl({ src: ['assets/sounds/' + soundFiles[i]] }));
+}

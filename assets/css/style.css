@@ -2,7 +2,7 @@ html, body {
   margin: 0;
   height: 100%;
   color: white;
-  font-family: sans-serif;
+  font-family: 'Bungee', cursive;
 }
 
 canvas {
@@ -13,7 +13,7 @@ canvas {
 
 .layers {
   display: grid;
-  grid-template-columns: 1fr;
+  grid-template-columns: 100%;
   grid-template-rows: 100%;
   height: 100%;
   width: 100%;
@@ -26,6 +26,8 @@ canvas {
 
 .layer-top {
   z-index: 10;
-  padding: 20%;
+  padding: 5%;
   text-align: center;
+  color: rgba(255, 255, 255, 0.3);
+  font-size: 3em;
 }
