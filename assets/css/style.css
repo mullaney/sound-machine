@@ -1,0 +1,31 @@
+html, body {
+  margin: 0;
+  height: 100%;
+  color: white;
+  font-family: sans-serif;
+}
+
+canvas {
+  height: 100%;
+  widght: 100%;
+  background: black;
+}
+
+.layers {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 100%;
+  height: 100%;
+  width: 100%;
+}
+
+.layer {
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
+}
+
+.layer-top {
+  z-index: 10;
+  padding: 20%;
+  text-align: center;
+}
